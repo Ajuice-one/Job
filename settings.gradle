@@ -1,0 +1,4 @@
+rootProject.name = "TwoGroup"
+include ':app'
+include ':mvp'
+include ':network'
