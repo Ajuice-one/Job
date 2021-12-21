@@ -4,11 +4,6 @@ import com.bawei.mvp.m.IModel;
 import com.bawei.mvp.v.IView;
 
 import java.lang.ref.WeakReference;
-import java.util.function.IntToDoubleFunction;
-
-import io.reactivex.Observer;
-import io.reactivex.disposables.CompositeDisposable;
-import io.reactivex.disposables.Disposable;
 
 public abstract
 /**
@@ -19,7 +14,6 @@ public abstract
 class BasePresenter<V extends IView, M extends IModel> implements IPresenter<V> {
     private WeakReference<V> weakReference;
     protected M mModel;
-    protected CompositeDisposable compositeDisposable;
 
     @Override
     public void bindView(V view) {
@@ -27,20 +21,11 @@ class BasePresenter<V extends IView, M extends IModel> implements IPresenter<V> 
         if (!isbingView()) {
             weakReference = new WeakReference<>(view);
             mModel = createModel();
-            compositeDisposable = new CompositeDisposable();
         }
     }
 
     //留于实现
     protected abstract M createModel();
-
-    @Override
-    public void addDisposable(Disposable disposable) {
-        //捆绑防止泄露
-        if (compositeDisposable != null) {
-            compositeDisposable.add(disposable);
-        }
-    }
 
     @Override
     public void unbindView() {
@@ -52,9 +37,6 @@ class BasePresenter<V extends IView, M extends IModel> implements IPresenter<V> 
             mModel.destroy();
             mModel = null;
 
-            compositeDisposable.dispose();
-            compositeDisposable.clear();
-            compositeDisposable = null;
         }
     }
 
