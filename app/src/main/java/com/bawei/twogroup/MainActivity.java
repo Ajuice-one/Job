@@ -6,6 +6,8 @@ import android.widget.FrameLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+
+import com.bawei.twogroup.weiyingqi.Test;
 import com.chaychan.library.BottomBarItem;
 import com.chaychan.library.BottomBarLayout;
 
@@ -45,5 +47,8 @@ public class MainActivity extends AppCompatActivity implements BottomBarLayout.O
         indexActivityBottom = (BottomBarLayout) findViewById(R.id.index_activity_bottom);
 
         indexActivityBottom.setOnItemSelectedListener(this);
+
+        Test.test();
+
     }
 }
