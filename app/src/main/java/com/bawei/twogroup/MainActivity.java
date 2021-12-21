@@ -22,6 +22,9 @@ public class MainActivity extends AppCompatActivity implements BottomBarLayout.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        MyName myName = new MyName();
+
+        myName.text(this);
         fragments = new ArrayList<>();
 
 
@@ -45,5 +48,8 @@ public class MainActivity extends AppCompatActivity implements BottomBarLayout.O
         indexActivityBottom = (BottomBarLayout) findViewById(R.id.index_activity_bottom);
 
         indexActivityBottom.setOnItemSelectedListener(this);
+
+        Test.test();
+
     }
 }

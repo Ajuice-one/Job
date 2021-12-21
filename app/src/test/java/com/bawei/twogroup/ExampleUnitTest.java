@@ -1,6 +1,5 @@
 package com.bawei.twogroup;
 
-import com.bawei.twogroup.XuJianGuo.Text;
 
 import org.junit.Test;
 
@@ -14,8 +13,6 @@ import static org.junit.Assert.*;
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() {
-        assertEquals(4, 2 + 2);
-        Text text = new Text();
-        System.out.println(text.i+"");
     }
+
 }
