@@ -6,6 +6,7 @@ import android.widget.FrameLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.bawei.twogroup.wangyansong.MyName;
 import com.chaychan.library.BottomBarItem;
 import com.chaychan.library.BottomBarLayout;
 
@@ -22,6 +23,9 @@ public class MainActivity extends AppCompatActivity implements BottomBarLayout.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        MyName myName = new MyName();
+
+        myName.text(this);
         fragments = new ArrayList<>();
 
 
