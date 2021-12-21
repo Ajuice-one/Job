@@ -1,6 +1,5 @@
 package com.bawei.mvp.m;
 
-import com.bawei.network.factory.HttpManager;
 
 public abstract
 /**
@@ -10,21 +9,18 @@ public abstract
  */
 class BaseModel implements IModel {
 
-    //持有网络管理者
-    protected HttpManager mhttpManager;
-
     public BaseModel() {
-        //构造时赋值
-        if (mhttpManager == null) {
-            mhttpManager = HttpManager.getInstance();
-        }
+//        //构造时赋值
+//        if (mhttpManager == null) {
+//            mhttpManager = HttpManager.getInstance();
+//        }
     }
 
     @Override
     public void destroy() {
-        if (mhttpManager != null) {
-            mhttpManager.destroy();
-            mhttpManager = null;
-        }
+//        if (mhttpManager != null) {
+//            mhttpManager.destroy();
+//            mhttpManager = null;
+//        }
     }
 }

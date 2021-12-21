@@ -2,8 +2,6 @@ package com.bawei.mvp.p;
 
 import com.bawei.mvp.v.IView;
 
-import io.reactivex.disposables.Disposable;
-import io.reactivex.disposables.Disposables;
 
 public
 /**
@@ -21,5 +19,4 @@ interface IPresenter<V extends IView> {
 
     V getView();
 
-    void addDisposable(Disposable disposable);
 }

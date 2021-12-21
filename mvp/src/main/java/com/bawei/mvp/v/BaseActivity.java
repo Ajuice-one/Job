@@ -8,7 +8,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bawei.mvp.p.IPresenter;
-import com.bawei.network.intent.Indentoff;
 
 public abstract
 /**
